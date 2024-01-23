@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+  </head>
+  <body>
+    <!-- Container  ------------------>
+    <div class="container">
+      <!-- Time and date -->
+      <div class="time-date">
+        <div class="display-time">tid</div>
+        <div class="display-date">datum</div>
+      </div>
+
+      <input
+        type="text"
+        class="nameSection"
+        placeholder="Skriv ditt namn här. "
+      />
+
+      <!-- Card-wrapper ⬇ ------------------------>
+      <section class="card-wrapper">
+        <!-- Snabblänkar -->
+        <div class="card">
+          Snabblänkar
+          <div id="input-fields" style="display: none">
+            <label for="newLinkName"></label>
+            <input
+              type="text"
+              id="newLinkName"
+              placeholder="Enter new link name"
+            />
+            <label for="newLinkURL"></label>
+            <input
+              type="text"
+              id="newLinkURL"
+              placeholder="Enter new link URL"
+            />
+
+            <button id="save-new-link-btn" onclick="saveNewLink()">
+              Save New Link
+            </button>
+          </div>
+          <ul id="linkList"></ul>
+
+          <button id="add-link" onclick="displayInputFields()">
+            ➕ Lägg till länk
+          </button>
+        </div>
+
+        <!-- Väder -->
+        <div class="card" id="weather-card" data-weather>Dagens väder</div>
+
+        <!-- Chuck API -->
+        <div class="card">
+          Chuck!
+          <textarea class="chuck-area"></textarea>
+        </div>
+
+        <!-- // Anteckningar -->
+        <div class="card">
+          Anteckningar
+          <!-- <input class="note-area" type="text" /> -->
+          <textarea class="note-area"></textarea>
+        </div>
+      </section>
+      <!-- Card-wrapper ⬆ ------------------------>
+
+      <!-- Button bkg-image -->
+      <button type="submit" class="new-image-button">
+        <span class="material-symbols-outlined"> refresh </span>
+        <span>Slumpa en ny bakgrund</span>
+      </button>
+
+      <!-- Button gps-weather -->
+      <button class="button weather-button">klicka för din gps kordinat</button>
+    </div>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
